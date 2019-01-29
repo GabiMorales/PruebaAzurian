@@ -1,0 +1,22 @@
+DROP SCHEMA IF EXISTS prueba;
+
+CREATE SCHEMA IF NOT EXISTS prueba;
+
+DROP TABLE IF EXISTS prueba.persona ;
+
+CREATE TABLE IF NOT EXISTS prueba.persona (
+  idpersona INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(75) NOT NULL,
+  apellido VARCHAR(75) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  PRIMARY KEY (idpersona),
+  UNIQUE INDEX idpersona_UNIQUE (idpersona ASC),
+  UNIQUE INDEX email_UNIQUE (email ASC))
+ENGINE = InnoDB;
+
+INSERT INTO prueba.persona (idpersona, nombre, apellido, email) VALUES (1,'Gabriel','Morales', 'gm@gmail.com');
+INSERT INTO prueba.persona (idpersona, nombre, apellido, email) VALUES (2,'Andres','Inostroza', 'ai@gmail.com');
+INSERT INTO prueba.persona (idpersona, nombre, apellido, email) VALUES (3,'Tomas','Fernadez', 'tm@gmail.com');
+INSERT INTO prueba.persona (idpersona, nombre, apellido, email) VALUES (4,'Juan','Sanchez', 'as@gmail.com');
+INSERT INTO prueba.persona (idpersona, nombre, apellido, email) VALUES (5,'Diego','Leon', 'dl@hotmail.com');
+
